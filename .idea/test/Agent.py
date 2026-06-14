@@ -6,7 +6,7 @@ import os
 
 
 client = AsyncOpenAI(
-    api_key="sk-ws-H.REHDXYX.H8xe.MEQCIDmCSeiu6w_sY4dym1W-79OmzcaTCk2DaZXkHfHeCFuXAiB6LcJDSFGendZjq6pq-JzfHj1RJLq8NPWNlIDBjUK2QQ",
+    api_key= os.getenv("OPENAI_API_KEY"),
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 async def main():

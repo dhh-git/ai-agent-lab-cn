@@ -7,9 +7,8 @@ from openai import OpenAI
 try:
     client = OpenAI(
         # 阿里云百炼：api-key:
-        # sk-ws-H.REHDXYX.9VoL.MEUCIDx4dvFWKCb9AkYpSaCXDsvyEOsK0UNbY0WmUlGyYdIWAiEAmDlcSMqLa7oMG0dn0-7hqBOhQLfoemxdAjOss1TJhqE
-        api_key = "sk-ws-H.REHDXYX.9VoL.MEUCIDx4dvFWKCb9AkYpSaCXDsvyEOsK0UNbY0WmUlGyYdIWAiEAmDlcSMqLa7oMG0dn0-7hqBOhQLfoemxdAjOss1TJhqE",
-        base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        api_key = os.getenv("qwen-api-key"),
+        base_url = os.getenv("qwen-base-url"),
     )
 
     completion = client.chat.completions.create(
